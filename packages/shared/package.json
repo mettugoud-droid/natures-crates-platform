@@ -12,7 +12,7 @@
     }
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --module commonjs --moduleResolution node --outDir ./dist --rootDir ./src --declaration --esModuleInterop --skipLibCheck",
     "dev": "tsc --watch",
     "lint": "eslint src/"
   },
