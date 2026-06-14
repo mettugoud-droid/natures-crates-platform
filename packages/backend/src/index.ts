@@ -87,6 +87,21 @@ app.use(redisRateLimiter);
 // =====================================================
 // PUBLIC ENDPOINTS (no auth required)
 // =====================================================
+// Diagnostic endpoint (temporary - remove after DB is working)
+app.get('/api/debug/db-config', (_req, res) => {
+  const dbUrl = process.env.DATABASE_URL || 'NOT SET';
+  const masked = dbUrl === 'NOT SET' ? 'NOT SET' : dbUrl.replace(/:[^:@]+@/, ':***@');
+  res.json({
+    DATABASE_URL_SET: !!process.env.DATABASE_URL,
+    DATABASE_URL_MASKED: masked,
+    DB_HOST: process.env.DB_HOST || 'NOT SET',
+    DB_PORT: process.env.DB_PORT || 'NOT SET',
+    DB_NAME: process.env.DB_NAME || 'NOT SET',
+    DB_USER: process.env.DB_USER || 'NOT SET',
+    DB_SSL: process.env.DB_SSL || 'NOT SET',
+  });
+});
+
 app.get('/api/health', (_req, res) => {
   res.json({
     success: true,
