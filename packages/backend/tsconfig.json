@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "target": "ES2022",
+    "paths": {
+      "@natures-crates/shared": ["../shared/dist"]
+    },
+    "baseUrl": "."
+  },
+  "include": ["src/**/*"]
+}
