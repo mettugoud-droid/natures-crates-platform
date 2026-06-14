@@ -1,0 +1,77 @@
+-- =====================================================
+-- Seed Data: Competitors
+-- =====================================================
+
+INSERT INTO competitors (name, brand, competitor_type, website, marketplaces, categories, estimated_revenue, pricing_strategy, strengths, weaknesses, unique_selling_points) VALUES
+
+('Happilo', 'Happilo', 'd2c_brand', 'https://www.happilo.com',
+  ARRAY['amazon_india', 'flipkart', 'blinkit', 'zepto', 'instamart'],
+  ARRAY['dry_fruits', 'nuts', 'seeds', 'trail_mixes', 'healthy_snacks'],
+  '500+ Crore',
+  'premium',
+  ARRAY['Strong brand recognition', 'Wide distribution', 'Premium positioning', 'Good packaging'],
+  ARRAY['Higher prices', 'Limited organic range', 'Less D2C focus'],
+  ARRAY['Premium quality guarantee', 'Wide variety', 'Festival collections']),
+
+('Farmley', 'Farmley', 'd2c_brand', 'https://www.farmley.com',
+  ARRAY['amazon_india', 'flipkart', 'blinkit', 'zepto'],
+  ARRAY['dry_fruits', 'nuts', 'healthy_snacks'],
+  '100-200 Crore',
+  'mid_range',
+  ARRAY['Competitive pricing', 'Quick commerce presence', 'Fun branding'],
+  ARRAY['Newer brand', 'Limited premium range', 'Less corporate gifting'],
+  ARRAY['Farm-to-fork story', 'Fun flavours', 'Youth-focused branding']),
+
+('True Elements', 'True Elements', 'd2c_brand', 'https://www.trueelements.com',
+  ARRAY['amazon_india', 'flipkart', 'd2c_website'],
+  ARRAY['seeds', 'functional_foods', 'healthy_snacks', 'trail_mixes'],
+  '100-200 Crore',
+  'mid_range',
+  ARRAY['Health-focused positioning', 'Strong seed category', 'Good online presence'],
+  ARRAY['Limited offline distribution', 'Less premium feel', 'Narrow category focus'],
+  ARRAY['Whole food nutrition', 'Clean label', 'Fitness community targeting']),
+
+('Nutraj', 'Nutraj', 'amazon_seller', 'https://www.nutraj.com',
+  ARRAY['amazon_india', 'flipkart'],
+  ARRAY['dry_fruits', 'nuts'],
+  '200-500 Crore',
+  'mid_range',
+  ARRAY['Wide range', 'Established brand', 'Good ratings'],
+  ARRAY['Traditional branding', 'Less innovation', 'Limited snack range'],
+  ARRAY['Quality assurance', 'Direct sourcing', 'Value for money']),
+
+('Yoga Bar', 'Yoga Bar', 'd2c_brand', 'https://www.yogabars.in',
+  ARRAY['amazon_india', 'flipkart', 'blinkit', 'zepto', 'instamart', 'd2c_website'],
+  ARRAY['healthy_snacks', 'functional_foods', 'trail_mixes'],
+  '200-500 Crore',
+  'premium',
+  ARRAY['Strong brand', 'Innovative products', 'Quick commerce presence', 'Celebrity backing'],
+  ARRAY['Higher prices', 'Limited dry fruit range', 'Narrow focus on bars'],
+  ARRAY['Protein-focused', 'Clean ingredients', 'On-the-go nutrition']),
+
+('Solimo (Amazon Brand)', 'Solimo', 'amazon_seller', NULL,
+  ARRAY['amazon_india'],
+  ARRAY['dry_fruits', 'nuts', 'seeds'],
+  'N/A',
+  'budget',
+  ARRAY['Amazon backed', 'Low prices', 'Good visibility', 'Trust of Amazon brand'],
+  ARRAY['Generic branding', 'No USP', 'Limited innovation', 'No emotional connect'],
+  ARRAY['Amazon quality guarantee', 'Best price', 'Convenience']),
+
+('Vedaka (Amazon Brand)', 'Vedaka', 'amazon_seller', NULL,
+  ARRAY['amazon_india'],
+  ARRAY['dry_fruits', 'nuts', 'premium_daily_essentials'],
+  'N/A',
+  'value',
+  ARRAY['Premium Amazon brand', 'Good quality perception', 'Competitive pricing'],
+  ARRAY['No standalone brand identity', 'Limited offline', 'Amazon-dependent'],
+  ARRAY['Quality at value', 'Amazon fresh integration']),
+
+('Nourish Organics', 'Nourish Organics', 'd2c_brand', 'https://www.nourishorganics.in',
+  ARRAY['amazon_india', 'd2c_website'],
+  ARRAY['functional_foods', 'healthy_snacks', 'wellness_products'],
+  '50-100 Crore',
+  'premium',
+  ARRAY['Organic focus', 'Female-targeted', 'Premium positioning', 'D2C strength'],
+  ARRAY['Limited distribution', 'Higher prices', 'Niche audience'],
+  ARRAY['100% organic', 'Women-focused nutrition', 'No preservatives']);
