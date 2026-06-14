@@ -1,5 +1,5 @@
 import { productIntelligenceService } from '../services/productIntelligence';
-import { ALL_CATEGORIES } from '@natures-crates/shared';
+import { ALL_CATEGORIES } from '../../../shared/src/index';
 import { logger } from '../utils/logger';
 
 /**

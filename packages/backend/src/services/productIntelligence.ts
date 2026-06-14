@@ -1,7 +1,7 @@
 import { query, queryOne, transaction } from '../db/pool';
 import { connectorRegistry } from '../connectors/registry';
 import { logger } from '../utils/logger';
-import type { Product, ProductSearchFilters } from '@natures-crates/shared';
+import type { ProductSearchFilters } from '../../../shared/src/types/product';
 
 export class ProductIntelligenceService {
   /**

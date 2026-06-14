@@ -1,6 +1,6 @@
 import { query, queryOne } from '../db/pool';
 import { logger } from '../utils/logger';
-import { GST_RATES, MARKETPLACE_FEE_RATES, MARGIN_TARGETS } from '@natures-crates/shared';
+import { GST_RATES, MARKETPLACE_FEE_RATES, MARGIN_TARGETS } from '../../../shared/src/index';
 
 interface MarginInput {
   productId: string;

@@ -1,5 +1,5 @@
 import { query, queryOne } from '../db/pool';
-import { calculateOpportunityScore, classifyOpportunity } from '@natures-crates/shared';
+import { calculateOpportunityScore, classifyOpportunity } from '../../../shared/src/index';
 import { logger } from '../utils/logger';
 
 interface WhiteLabelAnalysisInput {

@@ -1,6 +1,6 @@
 import { query, queryOne } from '../db/pool';
 import { connectorRegistry } from '../connectors/registry';
-import { calculateSupplierTrustScore } from '@natures-crates/shared';
+import { calculateSupplierTrustScore } from '../../../shared/src/index';
 import { logger } from '../utils/logger';
 
 interface ManufacturerSearchParams {
