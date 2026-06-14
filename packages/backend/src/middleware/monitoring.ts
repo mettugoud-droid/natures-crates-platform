@@ -65,7 +65,8 @@ export async function detailedHealthCheck(_req: Request, res: Response): Promise
     await pool.query('SELECT 1');
     checks['database'] = { status: 'healthy', responseTime: Date.now() - dbStart };
   } catch (error) {
-    checks['database'] = { status: 'unhealthy', responseTime: Date.now() - dbStart, details: 'Connection failed' };
+    const errMsg = error instanceof Error ? error.message : 'Unknown';
+    checks['database'] = { status: 'unhealthy', responseTime: Date.now() - dbStart, details: errMsg };
   }
 
   // Calculate metrics
