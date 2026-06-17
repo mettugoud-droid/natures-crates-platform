@@ -1,11 +1,13 @@
 import axios from 'axios';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY || '';
 
 export const api = axios.create({
   baseURL: `${API_BASE}/api`,
   headers: {
     'Content-Type': 'application/json',
+    ...(API_KEY && { 'x-api-key': API_KEY }),
   },
 });
 
