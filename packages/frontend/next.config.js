@@ -20,3 +20,4 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+// Build trigger: Wed Jun 17 04:36:35 PM UTC 2026
