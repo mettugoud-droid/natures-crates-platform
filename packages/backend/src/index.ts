@@ -61,9 +61,14 @@ const app = express();
 // Security headers & CORS
 app.use(helmet());
 app.use(cors({
-  origin: [config.frontendUrl, 'http://localhost:3000'],
+  origin: [
+    config.frontendUrl,
+    'http://localhost:3000',
+    'https://natures-cratesfrontend-production.up.railway.app',
+    /\.up\.railway\.app$/,
+  ],
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'x-api-key', 'x-request-id'],
 }));
 app.use(compression());
