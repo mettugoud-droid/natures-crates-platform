@@ -1,0 +1,27 @@
+name: Nature's Crates CRM CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [crm-v1]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run lint
+      - name: CRM route smoke check
+        run: |
+          test -f packages/frontend/src/app/crm/page.tsx
+          test -f packages/frontend/src/app/crm/crm.module.css
+          test -f packages/backend/src/routes/crm.ts
+          test -f packages/backend/src/routes/crmImport.ts
+          test -f packages/backend/src/db/migrations/002_crm_schema.sql
